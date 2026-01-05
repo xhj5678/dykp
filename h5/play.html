@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>视频播放</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="player-box">
+  <video id="player" controls playsinline></video>
+</div>
+
+<h2 id="title"></h2>
+<p class="meta" id="meta"></p>
+
+<div class="lock" id="lock" style="display:none">
+  <p>试看结束，解锁观看完整视频</p>
+  <button onclick="vip()">开通 VIP</button>
+  <button onclick="usePoint()">积分解锁</button>
+  <button onclick="useCard()">输入卡密</button>
+</div>
+
+<div class="recommend" id="rec"></div>
+
+<script src="js/api.js"></script>
+<script src="js/play.js"></script>
+</body>
+</html>
