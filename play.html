@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频播放</title>
+
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: -apple-system;
+}
+.video-box video {
+  width: 100%;
+}
+.lock {
+  background: #111;
+  padding: 15px;
+}
+.btn {
+  background: red;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.info {
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 播放器 -->
+<div class="video-box">
+  <video src="" controls poster="https://via.placeholder.com/750x420"></video>
+</div>
+
+<!-- 解锁区域 -->
+<div class="lock">
+  <div>试看已结束</div>
+
+  <div class="btn">开通 VIP 观看</div>
+  <div class="btn">单片付费观看</div>
+  <div class="btn">积分兑换观看</div>
+  <div class="btn">输入卡密</div>
+</div>
+
+<!-- 视频信息 -->
+<div class="info">
+  <h3>视频标题</h3>
+  <p>#标签1 #标签2</p>
+</div>
+
+</body>
+</html>
