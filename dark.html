@@ -1,0 +1,18 @@
+<div class="tabs">
+  <span onclick="load('暗网')">暗网</span>
+  <span onclick="load('推荐')">推荐</span>
+</div>
+<div id="list"></div>
+
+<script src="js/api.js"></script>
+<script>
+function load(cat){
+  api.get('/api/video/list?cat='+cat, res=>{
+    list.innerHTML='';
+    res.data.list.forEach(v=>{
+      list.innerHTML+=`<div>${v.title}</div>`;
+    });
+  });
+}
+load('暗网');
+</script>
