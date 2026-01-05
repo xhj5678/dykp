@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频站-首页</title>
+
+<style>
+body {
+  margin: 0;
+  background: #0e0e0e;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont;
+}
+.header {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  background: #1c1c1c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.banner img {
+  width: 100%;
+  border-radius: 8px;
+}
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+.video {
+  position: relative;
+}
+.video img {
+  width: 100%;
+  border-radius: 6px;
+}
+.tag {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: red;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.title {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+}
+.bottom div {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup img {
+  width: 80%;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 顶部 -->
+<div class="header">
+  <div>LOGO</div>
+  <div class="search">🔍 搜索</div>
+</div>
+
+<!-- Banner -->
+<div class="banner">
+  <img src="https://via.placeholder.com/750x300">
+</div>
+
+<!-- 视频列表 -->
+<div class="video-list">
+  <div class="video" onclick="location.href='play.html'">
+    <span class="tag">VIP</span>
+    <img src="https://via.placeholder.com/300x180">
+    <div class="title">示例视频标题</div>
+  </div>
+  <div class="video">
+    <span class="tag">广告</span>
+    <img src="https://via.placeholder.com/300x180">
+    <div class="title">示例视频标题</div>
+  </div>
+</div>
+
+<!-- 底部导航 -->
+<div class="bottom">
+  <div>首页</div>
+  <div>暗网</div>
+  <div>我的</div>
+</div>
+
+<!-- 弹窗广告 -->
+<div class="popup" onclick="this.style.display='none'">
+  <img src="https://via.placeholder.com/500x700">
+</div>
+
+</body>
+</html>
