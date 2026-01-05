@@ -3,7 +3,12 @@ require '../common/auth.php';
 require '../../core/DB.php';
 
 // 第三方接口地址
-$api = 'https://example.com/api/videos';
+$cfg = DB::fetch("SELECT value FROM site_config WHERE `key`='video_api'");
+if (!$cfg || !$cfg['value']) {
+    exit('未配置视频接口');
+}
+
+$api = $cfg['value'];
 
 $json = file_get_contents($api);
 $data = json_decode($json, true);
