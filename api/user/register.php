@@ -55,3 +55,19 @@ Response::json([
     'uid' => $uid,
     'invite_code' => $myCode
 ]);
+
+// ===== 邀请奖励积分 =====
+if ($inviteCode && $parent) {
+    $cfg = require '../../config/config.php';
+    $reward = $cfg['point']['invite_reward'];
+
+    DB::query("
+        UPDATE user SET point = point + $reward
+        WHERE id = {$parent['id']}
+    ");
+
+    DB::query("
+        INSERT INTO point_log(uid,change,reason,time)
+        VALUES ({$parent['id']},$reward,'邀请奖励',NOW())
+    ");
+}
