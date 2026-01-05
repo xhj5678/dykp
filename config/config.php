@@ -8,3 +8,10 @@ return [
         'min_rate' => 0.005       // 小于 0.5% 停止
     ]
 ];
+
+return [
+    'point' => [
+        'invite_reward' => 20,    // 邀请一个人得 20 分
+        'video_cost'    => 10     // 解锁一个视频花 10 分
+    ]
+];
